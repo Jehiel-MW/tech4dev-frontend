@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hotel Room Payment Calculator</title>
+    <script src="./js/hotelRoom.js"></script>
+  </head>
+  <body>
+    <h1>Hotel Room Payment Calculator</h1>
+    <form onsubmit="calculateTotal(); return false;">
+      <label for="month">Month:</label>
+      <select id="month" name="month">
+        <option value="0">May/October</option>
+        <option value="1">June/September</option>
+        <option value="2">July/August</option>
+      </select>
+      <br>
+      <label for="days">Booked days:</label>
+      <input type="number" id="days" name="days" min="1">
+      <br>
+      <button type="submit" onclick="calculateTotal()">Calculate Total Price</button>
+    </form>
+    <div id="result"></div>
+    <script src="./js/hotelRoom.js">
+      
+    </script>
+  </body>
+</html>
+
