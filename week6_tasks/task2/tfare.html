@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Transport Cost Calculator</title>
+  </head>
+  <body>
+    <h1>Transport Cost Calculator</h1>
+    <label for="distance">Distance (in km):</label>
+    <input type="number" id="distance" name="distance" min="1" max="5000"><br><br>
+    <label for="time">Time of travel:</label>
+    <select id="time" name="time">
+      <option value="day">Day</option>
+      <option value="night">Night</option>
+    </select><br><br>
+    <button onclick="calculateCost()">Calculate Cost</button><br><br>
+    <p id="result"></p>
+    <script src="./js/tfare.js"></script>
+  </body>
+</html>
+
