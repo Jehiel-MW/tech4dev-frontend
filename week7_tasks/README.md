@@ -3,19 +3,25 @@
 # IVAN IS 18 YEARS OLD AND RECEIVES AN INHERITANCE THAT CONSISTS OF X AMOUNT OF MONEY AND A TIME MACHINE. HE DECIDES TO RETURN TO1800,BUT DOES NOTKNOW IF THE MONEY WILL BE ENOUGH TO LIVE WITHOUT WORKING. WRITE A PROGRAM THAT CALCULATES IF IVAN WILLHAVEENOUGHMONEYTONOT HAVETO WORK UNTIL A PARTICULAR YEAR(INCLUSIVE). ASSUMING THAT FOR EVERY EVEN(1800,1802,ETC.) YEAR HE WILL SPEND 12000 DOLLARS.FOR EVERY ODD ONE(1801, 1803,ETC.) HE WILL SPEND 12000+50 * [THE AGE HE WILL HAVE REACHED IN THE GIVEN YEAR].
 
 # INPUT DATA
+#
 # The input is read from the console andcontains exactly 2 lines:
 #  Inherited money–a real number in the range [1.00 … 1 000 000.00].
 #  Year, until which he has to live in the past (inclusive)–integer number in the range [1801 … 1900].
 
 # OUTPUT DATA
+#
 # Printon the console1 line. The sum must be formatted up to the two symbols after the decimal point:
 #  If money is enough:   "Yes! He will live a carefree life and will have {N} dollars left."–where N is the money that will remain.
 #  If money is NOT enough:   "He will need {М} dollars to survive."–where M is the sum that is NOT enough.
 
 
 # SOLUTION TO PROBLEM
+#
+#
 
 # PART 1 -MODEL A Solution
+#
+#
 
 # Starting year = S
 # Remaining money at the nth year = Rn
@@ -32,6 +38,7 @@
 # Use this sequential approach
 
 # If the starting year is even then our R for a five-year model will be explained below
+#
 Year 1 = Ms
 Year 2 = Ms + (50*(A+1))
 Year 3 = Ms
@@ -51,6 +58,8 @@ R =  T - [Ms + Ms + (50*(A+1)) + Ms + Ms + (50*(A+3)) + Ms]
 # Example: if the Total money in the account (T) is 50000 and the amount of money to spend for an even year (Ms) is 12000. What will be the value of the money if the student's age (A) is 18 and the starting year (S) is 1800 and the ending year (E) is 1802
 
 # solution
+#
+#
 Year 1 = 12000 = Even year
 Year 2 = 12000 + (50*(18 + 1)) = 12000 + 950 = Odd year
 Year 3 = 12000 = Even year
@@ -81,8 +90,12 @@ R = 13050
 
 
 # PART 2 -WRITE THE PROGRAM BASED ON THE GIVEN MODEL
+#
+#
 
 # Programming Input instruction
+#
+#
 
 # You are to create an HTML input that will be based on the below
 # The two inputs are to be of the type number
@@ -94,6 +107,7 @@ R = 13050
 # The class will make sure that it started its calculation from 1800 up to the year the user enters in the HTML year input which will serve as the ending year of E
 
 # Important instruction
+#
 
 # i. All the variables should discreetly be declared
 # ii. During the outputting of the final result, Rn should either be D or it should be G as below
@@ -155,12 +169,12 @@ Note:
 Rn = T - [Te + To]
 
 # Output instructions
+#
 
 # There are either two outputs expected after the user's inputs have been calculated. Print on the console line. The sum must be formatted up to the two decimal points
 
 # i. If the money will be enough then Rn will be positive:
-where Rn is the money that will remain after the nth year. Therefore the Rn value is positive. If Rn is positive then Rn is equal to G. Console to the log G value as below: "Yes! He will live a carefree life and will have {G} dollars 
-left."
+where Rn is the money that will remain after the nth year. Therefore the Rn value is positive. If Rn is positive then Rn is equal to G. Console to the log G value as below: "Yes! He will live a carefree life and will have {G} dollars left."
 
 # ii. If money is NOT enough then Rn will be negative:
 where Rn is the sum 
